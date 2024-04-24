@@ -20,8 +20,9 @@ class ColorChanger:
             # self.window.configure(background=self.generateRandomColor())
             self.canvas.delete("all")
             self.canvas.create_oval(centerX - radius, centerY - radius, centerX + radius, centerY + radius, fill=self.generateRandomColor())
-            # self.canvas.create_oval(centerX - radius, centerY - radius, centerX + radius, centerY + radius)
-            # self.canvas.create_oval(centerX - radius + 10, centerY - radius, centerX + radius - 10, centerY + radius)
+            for i in range(20, 120, 20):
+                self.canvas.create_oval(centerX - (radius - i), centerY - radius, centerX + (radius - i), centerY + radius)
+                self.canvas.create_oval(centerX - radius, centerY - (radius - i), centerX + radius, centerY + (radius - i))
             self.window.update()
             time.sleep(0.5)
 
