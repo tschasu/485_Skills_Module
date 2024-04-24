@@ -14,10 +14,14 @@ class ColorChanger:
     def changeColor(self):
         (centerX, centerY) = (int(self.canvas['width']) / 2, int(self.canvas['height']) / 2)
         radius = 100
-        self.canvas.create_oval(centerX - radius, centerY - radius, centerX + radius, centerY + radius)
+        
 
         while (True):
-            self.window.configure(background=self.generateRandomColor())
+            # self.window.configure(background=self.generateRandomColor())
+            self.canvas.delete("all")
+            self.canvas.create_oval(centerX - radius, centerY - radius, centerX + radius, centerY + radius, fill=self.generateRandomColor())
+            # self.canvas.create_oval(centerX - radius, centerY - radius, centerX + radius, centerY + radius)
+            # self.canvas.create_oval(centerX - radius + 10, centerY - radius, centerX + radius - 10, centerY + radius)
             self.window.update()
             time.sleep(0.5)
 
