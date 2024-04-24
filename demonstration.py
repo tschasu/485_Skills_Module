@@ -10,7 +10,12 @@ class ColorChanger:
         self.button.pack()
 
     def changeColor(self):
-        self.window.configure(background=self.generateRandomColor())
+        while (True):
+            self.window.configure(background=self.generateRandomColor())
+            self.window.update()
+            time.sleep(0.5)
+
+        
 
     def obtainCurrentColor(self):
         return self.window["background"]
