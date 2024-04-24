@@ -9,6 +9,9 @@ class ColorChanger:
 
     def changeColor(self):
         self.window.configure(background='black')
+
+    def obtainCurrentColor(self):
+        return self.window["background"]
     
 
 mainWindow.title('Demonstration')
