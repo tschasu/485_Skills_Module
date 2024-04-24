@@ -9,7 +9,7 @@ class ColorChanger:
         self.window = window
         
         # Pack the button with the change color method as the target
-        self.button = Button(window, text="Acivate Disco Ball", command=self.changeColor)
+        self.button = Button(window, text="Activate Disco Ball", command=self.changeColor)
         self.button.pack()
 
         # create and save the canvas, packing
