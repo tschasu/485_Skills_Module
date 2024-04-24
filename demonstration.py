@@ -1,4 +1,5 @@
 from tkinter import *
+import random
 mainWindow = Tk()
 
 class ColorChanger:
@@ -12,6 +13,10 @@ class ColorChanger:
 
     def obtainCurrentColor(self):
         return self.window["background"]
+    
+    def generateRandomColor(self):
+        hex(random.randrange(0, 0x1000000))
+
     
 
 mainWindow.title('Demonstration')
