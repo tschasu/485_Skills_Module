@@ -7,8 +7,8 @@ class ColorChanger:
         self.button = Button(window, text="Change Color", command=self.changeColor)
         self.button.pack()
 
-    def changeColor(mainWindow):
-        print("Does not do anything yet")
+    def changeColor(self):
+        self.window.configure(background='black')
     
 
 mainWindow.title('Demonstration')
