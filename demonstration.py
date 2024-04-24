@@ -1,9 +1,15 @@
-import tkinter
-mainWindow = tkinter.Tk()
+from tkinter import *
+mainWindow = Tk()
+
+def changeColor():
+    print("Does Not Do Anything Yet")
 
 mainWindow.title('Demonstration')
-button = tkinter.Button(mainWindow, text='Quit Demonstration', command=mainWindow.destroy)
-button.pack()
-mainWindow.mainloop()
 
-print("TODO: DEMONSTRATE")
+button = Button(mainWindow, text="Change Color", command=changeColor)
+button.pack()
+
+quitButton = Button(mainWindow, text='Quit Demonstration', command=mainWindow.destroy)
+quitButton.pack()
+
+mainWindow.mainloop()
