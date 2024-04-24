@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+import time
 mainWindow = Tk()
 
 class ColorChanger:
@@ -9,13 +10,16 @@ class ColorChanger:
         self.button.pack()
 
     def changeColor(self):
+        # while True:
         self.window.configure(background='black')
+        self.generateRandomColor()
+            # self.window.after(1000, )
 
     def obtainCurrentColor(self):
         return self.window["background"]
     
     def generateRandomColor(self):
-        hex(random.randrange(0, 0x1000000))
+        return random.randrange(0, 0x1000000).to_bytes(3, 'big').hex()
 
     
 
